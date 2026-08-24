@@ -18,6 +18,4 @@ test("GET api/v1/status should return status code 200", async () => {
   expect(resDepDatabase.version).toBe("16.0");
   expect(resDepDatabase.max_connections).toBe(100);
   expect(resDepDatabase.opened_connections).toBe(1);
-
-  console.log(responseBody);
 });
