@@ -17,6 +17,9 @@ const compat = new FlatCompat({
 
 export default defineConfig([
     {
+        ignores: ["infra/migrations/**/*"],
+    },
+    {
         extends: [...compat.extends("eslint:recommended"), ...nextCoreWebVitals],
     },
     {
