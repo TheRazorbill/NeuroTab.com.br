@@ -11,13 +11,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/hydrogen"
+          node-version: "22.22.3"
           cache: npm
 
       - run: npm ci
 
       - run: npm run lint:prettier:check
-
   eslint:
     name: ESLint
     runs-on: ubuntu-latest
@@ -26,13 +25,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/hydrogen"
+          node-version: "22.22.3"
           cache: npm
 
       - run: npm ci
 
       - run: npm run lint:eslint:check
-
   commitLint:
     name: commitLint
     runs-on: ubuntu-latest
@@ -43,7 +41,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/hydrogen"
+          node-version: "22.22.3"
           cache: npm
 
       - run: npm ci
