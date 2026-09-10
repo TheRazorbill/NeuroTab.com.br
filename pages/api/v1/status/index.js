@@ -1,5 +1,5 @@
 import database from "infra/database.js";
-import { InternalServerError } from "infra/errors";
+import { InternalServerError } from "infra/errors.js";
 
 async function status(req, res) {
   try {
@@ -38,8 +38,8 @@ async function status(req, res) {
       cause: error,
     });
 
-    console.log("Erro dentro do catch do controller");
-    console.error(publicErrorObject);
+    console.error("Erro inesperado no controller /api/v1/status:", error);
+    console.error("Public error response:", publicErrorObject.toJSON());
 
     res.status(500).json(publicErrorObject);
   }
