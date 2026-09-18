@@ -16,7 +16,7 @@ function onErrorHandler(error, req, res) {
   res.status(publicErrorObject.statusCode).json(publicErrorObject);
 }
 const controller = {
-  erroeHandlers: {
+  errorHandlers: {
     onNoMatch: onNoMatchHandler,
     onError: onErrorHandler,
   },
